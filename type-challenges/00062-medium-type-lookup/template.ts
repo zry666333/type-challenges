@@ -1,0 +1,1 @@
+type LookUp<U extends Record<string, any>, T extends string> = U extends {type:T} ? U : never; 
