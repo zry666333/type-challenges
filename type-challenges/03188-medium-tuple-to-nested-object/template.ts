@@ -1,0 +1,1 @@
+type TupleToNestedObject<T extends readonly (string | number | symbol)[], U> = T extends [infer F, ...infer R extends (string | number | symbol)[]] ? {[P in F extends (string | number | symbol) ? F : never]:TupleToNestedObject<R, U>} : U;
