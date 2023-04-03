@@ -1,0 +1,1 @@
+type Zip<T extends readonly unknown[], U extends readonly unknown[]> = T extends [infer A, ...infer R] ? U extends [infer B, ...infer L] ? [[A, B], ...Zip<R, L>] : [] : []
